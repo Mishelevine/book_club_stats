@@ -14,7 +14,10 @@
     <a class="skip-link" href="#main">Перейти к книгам</a>
     <header class="site-header wrap">
       <a class="wordmark" href="#" aria-label="Рекомендации от редакции — в начало">
-        <img class="club-mascot" src="./assets/book-mascot.png" alt="" width="54" height="54">
+        <picture class="club-mascot-picture">
+          <source srcset="./assets/book-mascot.gif" media="(prefers-reduced-motion: no-preference)">
+          <img class="club-mascot" src="./assets/book-mascot.png" alt="" width="54" height="54">
+        </picture>
         <span>Редакция<span class="wordmark-dot">.</span></span>
       </a>
       <nav aria-label="Основная навигация">
@@ -27,11 +30,11 @@
       <section class="hero wrap" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow">ЧЕТЫРЕ ЧИТАТЕЛЯ. ОДНА КНИЖНАЯ ПОЛКА.</p>
-          <h1 id="hero-title">Рекомендации<br>от <em>редакции</em></h1>
+          <h1 id="hero-title">Рекомендации<br>от <span class="hero-accent">редакции</span></h1>
           <p class="hero-description">По очереди выбираем книгу. Читаем, встречаемся,<br class="desktop-break"> спорим о главном. А здесь оставляем впечатления.</p>
           <div class="editorial-signature"><div class="member-initials" aria-hidden="true"><span>М</span><span>В</span><span>Ю</span><span>Д</span></div><span id="member-names">Миша, Варя, Юля и Дима</span></div>
         </div>
-        <div class="hero-aside" aria-hidden="true"><p>Хорошие книги.<br>Разные мнения.<br><em>Наш общий опыт.</em></p></div>
+        <div class="hero-aside" aria-hidden="true"><p>Хорошие книги.<br>Разные мнения.<br><span class="aside-emphasis">Наш общий опыт.</span></p></div>
       </section>
 
       <div id="load-state" class="wrap load-state" role="status">Открываем книжную полку…</div>
