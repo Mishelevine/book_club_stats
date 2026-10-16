@@ -1,0 +1,26 @@
+{
+  "members": [
+    { "id": "misha", "name": "Миша" },
+    { "id": "varya", "name": "Варя" },
+    { "id": "yulia", "name": "Юля" },
+    { "id": "dima", "name": "Дима" }
+  ],
+  "books": [
+    {
+      "id": "flowers-for-algernon",
+      "title": "Цветы для Элджернона",
+      "author": "Дэниел Киз",
+      "cover": "assets/flowers-for-algernon.svg",
+      "pages": null,
+      "suggestedBy": null,
+      "status": "reading",
+      "finishedAt": null,
+      "ratings": {
+        "misha": { "stars": null, "text": "" },
+        "varya": { "stars": null, "text": "" },
+        "yulia": { "stars": null, "text": "" },
+        "dima": { "stars": null, "text": "" }
+      }
+    }
+  ]
+}

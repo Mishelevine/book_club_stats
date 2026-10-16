@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#faf9f5">
+    <meta name="description" content="Книжная полка Миши, Вари, Юли и Димы. Читаем, встречаемся, обсуждаем — и рекомендуем от редакции.">
+    <title>Рекомендации от редакции — читательский клуб</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к книгам</a>
+    <header class="site-header wrap">
+      <a class="wordmark" href="#" aria-label="Рекомендации от редакции — в начало">
+        <svg width="29" height="29" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M4 6c4-1 8 0 12 3 4-3 8-4 12-3v19c-4-1-8 0-12 3-4-3-8-4-12-3V6Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M16 9v19" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span>Редакция<span class="wordmark-dot">.</span></span>
+      </a>
+      <nav aria-label="Основная навигация">
+        <a href="#best">Лучшее</a><a href="#history">История чтения</a><a href="#numbers">В цифрах</a>
+      </nav>
+      <span class="header-note">НЕЗАВИСИМЫЙ ЧИТАТЕЛЬСКИЙ КЛУБ</span>
+    </header>
+
+    <main id="main">
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="tiny-spark" aria-hidden="true">✳</span> ЧЕТЫРЕ ЧИТАТЕЛЯ. ОДНА КНИЖНАЯ ПОЛКА.</p>
+          <h1 id="hero-title">Рекомендации<br>от <em>редакции</em></h1>
+          <p class="hero-description">По очереди выбираем книгу. Читаем, встречаемся,<br class="desktop-break"> спорим о главном. А здесь оставляем впечатления.</p>
+          <div class="editorial-signature"><div class="member-initials" aria-hidden="true"><span>М</span><span>В</span><span>Ю</span><span>Д</span></div><span id="member-names">Миша, Варя, Юля и Дима</span></div>
+        </div>
+        <div class="hero-aside" aria-hidden="true"><span class="aside-index">№ 001</span><span class="aside-rule"></span><p>Хорошие книги.<br>Разные мнения.<br><em>Наш общий опыт.</em></p></div>
+      </section>
+
+      <div id="load-state" class="wrap load-state" role="status">Открываем книжную полку…</div>
+      <noscript><p class="wrap load-error">Для показа книг и подсчёта оценок включите JavaScript в браузере.</p></noscript>
+      <div id="content" hidden>
+        <section id="current" class="current-section wrap" aria-labelledby="current-title"></section>
+        <section id="best" class="section wrap" aria-labelledby="best-title"></section>
+        <section id="history" class="section history-section wrap" aria-labelledby="history-title"></section>
+        <section id="editorial" class="section editorial-section" aria-labelledby="editorial-title"><div class="wrap" id="editorial-content"></div></section>
+        <section id="numbers" class="section numbers-section wrap" aria-labelledby="numbers-title"></section>
+      </div>
+    </main>
+
+    <footer class="site-footer wrap"><a class="footer-title" href="#">Рекомендации от редакции<span>.</span></a><p>Субъективно. С любовью к книгам.</p><span class="footer-note">ПРОЧИТАНО И ОБСУЖДЕНО ВМЕСТЕ</span></footer>
+  </body>
+</html>

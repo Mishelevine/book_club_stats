@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="870" viewBox="0 0 600 870" role="img" aria-labelledby="title desc">
+  <title id="title">Цветы для Элджернона — Дэниел Киз</title>
+  <desc id="desc">Авторская типографическая обложка сайта: светлые цветы на терракотовом фоне.</desc>
+  <defs>
+    <linearGradient id="paper" x2="1" y2="1"><stop stop-color="#a95742"/><stop offset="1" stop-color="#c87d5e"/></linearGradient>
+    <radialGradient id="petal"><stop stop-color="#f5ead6"/><stop offset="1" stop-color="#d9c49d"/></radialGradient>
+  </defs>
+  <path fill="url(#paper)" d="M0 0h600v870H0z"/>
+  <path fill="#6e332b" opacity=".16" d="M0 0h20v870H0z"/>
+  <path d="M40 33h520v804H40z" fill="none" stroke="#f3dbc1" stroke-opacity=".4"/>
+  <text x="300" y="94" text-anchor="middle" fill="#f7ecdc" font-family="Georgia,serif" font-size="24" letter-spacing="7">ДЭНИЕЛ КИЗ</text>
+  <g fill="#faf0df" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="69">
+    <text x="300" y="215">Цветы</text><text x="300" y="290">для</text><text x="300" y="365" font-size="63">Элджернона</text>
+  </g>
+  <g fill="none" stroke="#eed8b8" stroke-width="2" opacity=".72">
+    <path d="M301 753c6-109 31-177 10-266M302 717c-58-23-80-64-94-98M307 669c52-30 82-66 91-102M303 739c-27-42-36-78-25-111"/>
+    <path d="M295 687c-55-4-57-30-58-45 24 1 48 12 58 45ZM318 634c49-6 62-33 64-47-30 6-49 21-64 47Z" fill="#dec79f" fill-opacity=".2"/>
+  </g>
+  <g fill="url(#petal)">
+    <g transform="translate(310 487)"><ellipse cy="-30" rx="16" ry="34"/><ellipse cy="-30" rx="16" ry="34" transform="rotate(72)"/><ellipse cy="-30" rx="16" ry="34" transform="rotate(144)"/><ellipse cy="-30" rx="16" ry="34" transform="rotate(216)"/><ellipse cy="-30" rx="16" ry="34" transform="rotate(288)"/><circle r="12" fill="#a76843"/></g>
+    <g transform="translate(205 611) rotate(-25) scale(.72)"><ellipse cy="-30" rx="16" ry="34"/><ellipse cy="-30" rx="16" ry="34" transform="rotate(72)"/><ellipse cy="-30" rx="16" ry="34" transform="rotate(144)"/><ellipse cy="-30" rx="16" ry="34" transform="rotate(216)"/><ellipse cy="-30" rx="16" ry="34" transform="rotate(288)"/><circle r="12" fill="#a76843"/></g>
+    <g transform="translate(402 560) rotate(15) scale(.85)"><ellipse cy="-30" rx="16" ry="34"/><ellipse cy="-30" rx="16" ry="34" transform="rotate(72)"/><ellipse cy="-30" rx="16" ry="34" transform="rotate(144)"/><ellipse cy="-30" rx="16" ry="34" transform="rotate(216)"/><ellipse cy="-30" rx="16" ry="34" transform="rotate(288)"/><circle r="12" fill="#a76843"/></g>
+  </g>
+  <path d="M278 785h44" stroke="#f1dcc0"/>
+  <text x="300" y="815" text-anchor="middle" fill="#f7ecdc" font-family="Georgia,serif" font-size="13" letter-spacing="5">ЧИТАТЕЛЬСКИЙ КЛУБ</text>
+</svg>
