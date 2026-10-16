@@ -11,5 +11,5 @@ for (const book of data.books) {
     throw new Error(`Не найдена обложка: ${fileURLToPath(new URL(book.cover, root))}`);
   }
 }
-for (const file of ['index.html', 'styles.css', 'app.js', 'model.js', 'assets/favicon.svg']) await access(new URL(file, root));
+for (const file of ['index.html', 'styles.css', 'app.js', 'model.js', 'assets/book-mascot.png']) await access(new URL(file, root));
 console.log(`Данные и файлы в порядке: ${data.books.length} книг, ${data.members.length} участников.`);

@@ -31,8 +31,8 @@ img { display: block; max-width: 100%; }
 .skip-link:focus { top: 12px; }
 .site-header { min-height: 100px; display: flex; align-items: center; justify-content: space-between; gap: 24px; position: relative; }
 .site-header::after { content: ''; position: absolute; bottom: 0; left: 48px; right: 48px; border-bottom: 1px solid var(--line); }
-.wordmark { display: inline-flex; align-items: center; gap: 10px; font-family: var(--serif); font-size: 29px; font-weight: 600; line-height: 1; }
-.wordmark svg { color: var(--coral-dark); }
+.wordmark { display: inline-flex; align-items: center; gap: 2px; font-family: var(--serif); font-size: 29px; font-weight: 600; line-height: 1; }
+.club-mascot { width: 54px; height: 54px; object-fit: contain; image-rendering: pixelated; }
 .wordmark-dot { color: var(--coral-dark); }
 nav { display: flex; gap: 30px; }
 nav a { min-height: 44px; display: flex; align-items: center; font-size: 12px; color: var(--body); }
@@ -40,7 +40,6 @@ nav a { min-height: 44px; display: flex; align-items: center; font-size: 12px; c
 .hero { display: grid; grid-template-columns: 1fr 210px; align-items: end; padding-top: 65px; padding-bottom: 61px; gap: 36px; }
 .eyebrow { font-size: 9px; font-weight: 500; letter-spacing: 1.65px; line-height: 1.6; }
 .hero .eyebrow { display: flex; align-items: center; gap: 9px; color: var(--muted); }
-.tiny-spark { font-size: 18px; color: var(--coral-dark); line-height: 1; }
 h1 { font-family: var(--serif); font-size: clamp(62px, 6.3vw, 85px); font-weight: 400; line-height: .96; letter-spacing: -2.3px; margin: 25px 0 24px; }
 h1 em { color: var(--coral-dark); font-weight: 400; }
 .hero-description { color: var(--muted); font-size: 13px; line-height: 1.9; }
@@ -52,8 +51,6 @@ h1 em { color: var(--coral-dark); font-weight: 400; }
 .member-initials span:nth-child(3) { background: #e8d4cd; color: #6f4b43; }
 .member-initials span:nth-child(4) { background: #d7dedb; color: #455a55; }
 .hero-aside { padding-bottom: 12px; padding-left: 36px; border-left: 1px solid var(--line); }
-.aside-index { font-size: 10px; letter-spacing: 2px; color: var(--muted); }
-.aside-rule { display: block; width: 27px; border-bottom: 1px solid var(--coral); margin: 18px 0; }
 .hero-aside p { font-family: var(--serif); font-size: 24px; line-height: 1.35; }
 .hero-aside em { color: var(--muted); font-weight: 400; }
 .current-card { display: grid; grid-template-columns: 1.2fr 1fr; min-height: 462px; background: var(--soft); border: 1px solid #ece5db; border-radius: 3px; overflow: hidden; }
@@ -80,13 +77,15 @@ h1 em { color: var(--coral-dark); font-weight: 400; }
 .hero-cover { width: 211px; transform: rotate(7deg); box-shadow: 7px 14px 16px #533e3629, 18px 25px 38px #533e3617; }
 .cover-fallback { display: flex; flex-direction: column; padding: 10%; gap: 12px; color: #f8f1e5; background: var(--coral-dark); height: 100%; font-size: 12px; }
 .cover-fallback strong { font: 400 26px/1.1 var(--serif); }
-.section { padding-top: 73px; padding-bottom: 0; scroll-margin-top: 20px; }
+.section { padding-top: 73px; padding-bottom: 0; scroll-margin-top: 20px; position: relative; }
+.section:not(.editorial-section):not(.numbers-section)::before { content: ''; position: absolute; top: 36px; left: 48px; right: 48px; border-top: 1px solid var(--line); }
+.has-ranked-books #best::before { top: -30px; }
 .section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 27px; }
 .section-eyebrow { color: var(--muted); font-size: 8px; letter-spacing: 1.6px; margin-bottom: 10px; }
 .section-heading h2 { font-family: var(--serif); font-size: 43px; font-weight: 400; line-height: 1.1; letter-spacing: -.8px; }
 .section-description { font-size: 12px; color: var(--muted); margin-top: 10px; line-height: 1.8; }
 .section-aside { font-size: 8px; letter-spacing: 1.3px; color: var(--muted); text-align: right; padding-bottom: 4px; }
-.top-empty { display: flex; align-items: center; gap: 28px; min-height: 137px; border-block: 1px solid var(--line); padding: 25px 26px; }
+.top-empty { display: flex; align-items: center; gap: 28px; min-height: 137px; padding: 25px 26px; }
 .empty-stars { color: var(--coral-dark); font-size: 25px; letter-spacing: 1px; white-space: nowrap; }
 .top-empty h3 { font-family: var(--serif); font-size: 27px; font-weight: 400; }
 .top-empty p { color: var(--muted); font-size: 12px; margin-top: 6px; line-height: 1.8; }
@@ -108,12 +107,10 @@ h1 em { color: var(--coral-dark); font-weight: 400; }
 .rating-number { color: var(--coral-dark); font-size: 12px; font-weight: 500; }
 .not-rated { color: var(--muted); font-size: 10px; }
 .history-section { padding-bottom: 69px; }
-.timeline { border-top: 1px solid var(--line); }
-.timeline-entry { display: grid; grid-template-columns: 155px 106px minmax(0, 1fr); gap: 31px; padding: 30px 0; scroll-margin-top: 30px; border-bottom: 1px solid var(--line); }
+.timeline-entry { display: grid; grid-template-columns: 155px 106px minmax(0, 1fr); gap: 31px; padding: 30px 0; scroll-margin-top: 30px; }
 .timeline-date { display: flex; align-items: flex-start; flex-direction: column; padding-left: 20px; border-left: 1px solid var(--line); position: relative; font-size: 10px; color: var(--muted); }
 .timeline-node { width: 7px; height: 7px; border-radius: 50%; background: #c9c2b8; position: absolute; left: -4px; top: 10px; box-shadow: 0 0 0 5px var(--canvas); }
 .node-active { background: var(--coral-dark); }
-.entry-number { font-family: var(--serif); font-size: 28px; color: var(--ink); line-height: 1; margin: 0 0 13px; }
 .date-note { font-size: 9px; margin-top: 5px; color: var(--muted); }
 .timeline-cover .book-cover { width: 106px; }
 .timeline-body { min-width: 0; }
@@ -122,14 +119,14 @@ h1 em { color: var(--coral-dark); font-weight: 400; }
 .entry-heading .pill { margin-top: 4px; }
 .entry-rating { padding-top: 6px; }
 .entry-meta { color: var(--muted); font-size: 9px; margin-top: 16px; }
-.book-details { margin-top: 19px; border-top: 1px solid var(--line); }
+.book-details { margin-top: 19px; }
 .book-details summary { display: flex; align-items: center; justify-content: space-between; cursor: pointer; list-style: none; min-height: 46px; color: var(--body); font-size: 12px; gap: 16px; }
 .book-details summary::-webkit-details-marker { display: none; }
 .details-count { display: flex; align-items: center; gap: 20px; color: var(--muted); font-size: 9px; }
 .details-plus { font-size: 20px; line-height: 1; color: var(--coral-dark); font-weight: 400; }
 details[open] .details-plus { transform: rotate(45deg); }
 .member-reviews { padding: 2px 0 10px; }
-.member-review { display: flex; align-items: flex-start; gap: 11px; padding: 12px 0; border-top: 1px solid #e6dfd880; }
+.member-review { display: flex; align-items: flex-start; gap: 11px; padding: 12px 0; }
 .member-avatar { width: 30px; height: 30px; flex-shrink: 0; display: grid; place-items: center; border-radius: 50%; color: #5b4637; background: #e4d5c3; font-size: 10px; }
 .member-1 { background: #dedfcc; color: #4f5942; }
 .member-2 { background: #e8d4cd; color: #6f4b43; }
@@ -140,13 +137,12 @@ details[open] .details-plus { transform: rotate(45deg); }
 .review-text { white-space: pre-line; overflow-wrap: anywhere; font-size: 12px; color: var(--body); line-height: 1.85; padding-top: 7px; }
 .editorial-section { background: var(--soft); padding-block: 58px; border-block: 1px solid #ece5db; }
 .editorial-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
-.editorial-card { border-top: 1px solid #d9cebf; padding: 22px 0 0; }
+.editorial-card { padding: 22px 0 0; }
 .card-label { display: flex; align-items: center; gap: 9px; color: #746351; font-size: 8px; letter-spacing: 1.3px; }
-.card-symbol { color: var(--coral-dark); font-size: 20px; line-height: 1; }
 .editorial-card h3 { font-family: var(--serif); font-size: 31px; letter-spacing: -.4px; line-height: 1.1; font-weight: 400; margin-top: 15px; }
 .editorial-empty { font-size: 12px; color: var(--muted); line-height: 1.85; margin-top: 14px; }
 .card-footnote { margin-top: 23px; font-size: 9px; font-style: italic; color: var(--muted); }
-.favorites { margin-top: 40px; padding-top: 28px; border-top: 1px solid #d9cebf; }
+.favorites { margin-top: 40px; padding-top: 28px; }
 .favorites-heading { display: flex; align-items: center; gap: 16px; }
 .favorites-heading h3 { font-family: var(--serif); font-size: 30px; line-height: 1.1; font-weight: 400; }
 .favorites-heading p { color: var(--muted); font-size: 10px; }
@@ -177,7 +173,6 @@ details[open] .details-plus { transform: rotate(45deg); }
 .stat-label { display: block; color: var(--body); font-size: 10px; margin-top: 9px; }
 .stat p { color: var(--muted); font-size: 8px; margin-top: 6px; line-height: 1.8; }
 .numbers-note { color: var(--muted); font-size: 10px; text-align: center; margin-top: 44px; }
-.numbers-note span { color: var(--coral-dark); margin-right: 7px; font-size: 15px; }
 .site-footer { display: flex; align-items: center; min-height: 111px; gap: 24px; position: relative; }
 .site-footer::before { content: ''; position: absolute; left: 48px; right: 48px; top: 0; border-top: 1px solid var(--line); }
 .footer-title { font-family: var(--serif); font-size: 21px; font-weight: 500; }
@@ -206,7 +201,7 @@ details[open] .details-plus { transform: rotate(45deg); }
 }
 @media (max-width: 1000px) {
   .wrap { padding-inline: 32px; }
-  .site-header::after, .site-footer::before { left: 32px; right: 32px; }
+  .site-header::after, .site-footer::before, .section:not(.editorial-section):not(.numbers-section)::before { left: 32px; right: 32px; }
   .header-note { display: none; }
   .hero { grid-template-columns: 1fr 175px; gap: 24px; }
   .hero-aside { padding-left: 24px; }
@@ -235,16 +230,17 @@ details[open] .details-plus { transform: rotate(45deg); }
 @media (max-width: 700px) {
   .wrap { padding-inline: 24px; }
   .site-header { min-height: 79px; gap: 14px; }
-  .site-header::after, .site-footer::before { left: 24px; right: 24px; }
-  .wordmark { font-size: 25px; gap: 8px; }
-  .wordmark svg { width: 24px; height: 24px; }
+  .site-header::after, .site-footer::before, .section:not(.editorial-section):not(.numbers-section)::before { left: 24px; right: 24px; }
+  .section:not(.editorial-section):not(.numbers-section)::before { top: 24px; }
+  .has-ranked-books #best::before { top: -20px; }
+  .wordmark { font-size: 25px; gap: 0; }
+  .club-mascot { width: 42px; height: 42px; }
   nav { gap: 17px; }
   nav a { font-size: 10px; }
   nav a:nth-child(2) { font-size: 0; }
   nav a:nth-child(2)::after { content: 'История'; font-size: 10px; }
   .hero { display: block; padding-top: 43px; padding-bottom: 36px; }
   .hero .eyebrow { font-size: 7px; letter-spacing: 1.05px; gap: 7px; }
-  .tiny-spark { font-size: 16px; }
   h1 { font-size: clamp(52px, 10.4vw, 72px); letter-spacing: -1.8px; line-height: .98; margin: 22px 0; }
   .hero-description { font-size: 12px; }
   .hero-aside { display: none; }
@@ -289,7 +285,6 @@ details[open] .details-plus { transform: rotate(45deg); }
   .timeline-entry { grid-template-columns: 74px minmax(0, 1fr); gap: 18px 19px; padding-block: 24px; }
   .timeline-date { grid-column: 1 / -1; flex-direction: row; align-items: center; gap: 11px; border: 0; padding-left: 18px; font-size: 9px; }
   .timeline-node { top: 8px; left: 0; width: 5px; height: 5px; }
-  .entry-number { font-size: 20px; margin: 0; }
   .date-note { font-size: 8px; margin: 0 0 0 auto; }
   .timeline-cover .book-cover { width: 74px; }
   .entry-heading { gap: 10px; }
@@ -342,10 +337,10 @@ details[open] .details-plus { transform: rotate(45deg); }
 }
 @media (max-width: 370px) {
   .wrap { padding-inline: 18px; }
-  .site-header::after, .site-footer::before { left: 18px; right: 18px; }
+  .site-header::after, .site-footer::before, .section:not(.editorial-section):not(.numbers-section)::before { left: 18px; right: 18px; }
   nav { gap: 12px; }
-  .wordmark { font-size: 23px; gap: 6px; }
-  .wordmark svg { width: 21px; }
+  .wordmark { font-size: 23px; gap: 0; }
+  .club-mascot { width: 36px; height: 36px; }
   .hero .eyebrow { font-size: 6px; }
   h1 { font-size: 49px; }
   .current-copy { padding-inline: 21px; }
