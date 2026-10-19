@@ -14,12 +14,17 @@ const book = (id, scores = [], extras = {}) => ({
   ...extras,
 });
 
-test('initial data has one current book and no invented results', async () => {
-  const data = validateData(JSON.parse(await readFile(new URL('../data/books.json', import.meta.url), 'utf8')));
+test('a new library with one current book has no results', () => {
+  const data = validateData({ members, books: [book('first', [], { status: 'reading', finishedAt: null, pages: null, suggestedBy: null })] });
   assert.equal(data.books.length, 1);
   assert.equal(data.books[0].status, 'reading');
   assert.equal(average(data.books[0]), null);
   assert.equal(statistics(data.books, data.members).books, 0);
+});
+
+test('published library data is valid and has at most one current book', async () => {
+  const data = validateData(JSON.parse(await readFile(new URL('../data/books.json', import.meta.url), 'utf8')));
+  assert.ok(data.books.filter((book) => book.status === 'reading').length <= 1);
 });
 
 test('an absent score is excluded; half stars are preserved', () => {

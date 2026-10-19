@@ -13,6 +13,22 @@
       "cover": "assets/flowers-for-algernon.svg",
       "pages": null,
       "suggestedBy": null,
+      "status": "read",
+      "finishedAt": "2026-10-18",
+      "ratings": {
+        "misha": { "stars": 4.5, "text": "" },
+        "varya": { "stars": 4, "text": "" },
+        "yulia": { "stars": 4, "text": "" },
+        "dima": { "stars": 4, "text": "" }
+      }
+    },
+    {
+      "id": "hard-to-be-a-god",
+      "title": "Трудно быть богом",
+      "author": "Аркадий и Борис Стругацкие",
+      "cover": "assets/hard-to-be-a-god.svg",
+      "pages": null,
+      "suggestedBy": null,
       "status": "reading",
       "finishedAt": null,
       "ratings": {
