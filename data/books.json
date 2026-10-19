@@ -11,9 +11,10 @@
       "title": "Цветы для Элджернона",
       "author": "Дэниел Киз",
       "cover": "assets/flowers-for-algernon.svg",
-      "pages": null,
+      "pages": 384,
       "suggestedBy": null,
       "status": "read",
+      "startedAt": "2026-10-04",
       "finishedAt": "2026-10-18",
       "ratings": {
         "misha": { "stars": 4.5, "text": "" },

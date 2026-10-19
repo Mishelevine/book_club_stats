@@ -16,6 +16,8 @@ export function validateData(data) {
     if (book.suggestedBy !== null && !memberIds.has(book.suggestedBy)) fail(`${book.id}: неизвестный участник в suggestedBy.`);
     if (!['reading', 'read'].includes(book.status)) fail(`${book.id}: status должен быть reading или read.`);
     if (book.finishedAt !== null && (typeof book.finishedAt !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(book.finishedAt) || !Number.isFinite(Date.parse(`${book.finishedAt}T00:00:00Z`)) || new Date(`${book.finishedAt}T00:00:00Z`).toISOString().slice(0, 10) !== book.finishedAt)) fail(`${book.id}: finishedAt — существующая дата ГГГГ-ММ-ДД или null.`);
+    if (book.startedAt != null && (typeof book.startedAt !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(book.startedAt) || !Number.isFinite(Date.parse(`${book.startedAt}T00:00:00Z`)) || new Date(`${book.startedAt}T00:00:00Z`).toISOString().slice(0, 10) !== book.startedAt)) fail(`${book.id}: startedAt — существующая дата ГГГГ-ММ-ДД или null.`);
+    if (book.startedAt && book.finishedAt && book.startedAt > book.finishedAt) fail(`${book.id}: дата начала чтения позже даты завершения.`);
     if (book.status === 'reading' && book.finishedAt !== null) fail(`${book.id}: у текущей книги finishedAt должен быть null.`);
     if (!book.ratings || typeof book.ratings !== 'object' || Array.isArray(book.ratings)) fail(`${book.id}: нужен объект ratings.`);
     for (const [memberId, rating] of Object.entries(book.ratings)) {

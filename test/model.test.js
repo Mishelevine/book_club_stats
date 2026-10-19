@@ -103,3 +103,13 @@ test('validation rejects invalid stars, nonexistent dates, duplicate IDs and unk
   assert.throws(() => validateData({ members, books: [book('a', [], { cover: 'https://example.com/cover.svg' })] }));
   assert.throws(() => validateData({ members, books: [book('a', [], { cover: 'assets/../secrets.svg' })] }));
 });
+
+test('reading start dates are optional, valid and do not follow the finish date', () => {
+  for (const startedAt of [undefined, null, '2026-10-02', '2026-10-16']) {
+    assert.doesNotThrow(() => validateData({ members, books: [book('a', [], { startedAt })] }));
+  }
+  for (const startedAt of ['2026-02-30', '2026-13-01', '04.10.2026', '2026-10-17', 20261004]) {
+    assert.throws(() => validateData({ members, books: [book('a', [], { startedAt })] }));
+  }
+  assert.doesNotThrow(() => validateData({ members, books: [book('a', [], { status: 'reading', startedAt: '2026-10-18', finishedAt: null })] }));
+});
